@@ -56,7 +56,7 @@ const getLyrics = async () => {
 	// Generate new lyrics and tweet every 3 hours
 	setInterval(() => {
 		generateMarkov(allLyrics);
-	}, 1000 * 10);
+	}, 1000 * 60 * 60 * 3);
 };
 
 const generateMarkov = string => {
