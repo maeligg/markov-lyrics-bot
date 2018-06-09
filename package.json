@@ -1,0 +1,21 @@
+{
+  "name": "markov-lyrics-bot",
+  "version": "1.0.0",
+  "description": "A Twitter bot generating new Lyrics from an artist using Markov chains",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maël Brunet",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "lyricist": "^2.2.2",
+    "markovchain": "^1.0.2",
+    "twit": "^2.2.10"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}
