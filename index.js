@@ -3,8 +3,8 @@ const Lyricist = require('lyricist/node6');
 const MarkovChain = require('markovchain');
 
 // Uncomment these 2 lines if running locally (see readme for more details)
-const config = require('./config.js');
-process.env = config;
+// const config = require('./config.js');
+// process.env = config;
 
 const T = new Twit({
 	consumer_key: process.env.consumer_key,
