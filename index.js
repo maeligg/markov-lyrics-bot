@@ -53,10 +53,6 @@ const getLyrics = async () => {
 	});
 
 	generateMarkov(allLyrics);
-	// Generate new lyrics and tweet every 3 hours
-	setInterval(() => {
-		generateMarkov(allLyrics);
-	}, 1000 * 60 * 60 * 3);
 };
 
 const generateMarkov = string => {
@@ -81,9 +77,9 @@ const generateMarkov = string => {
 const postTweet = tweetContent => {
 	T.post('statuses/update', { status: tweetContent }, (err, data, resp) => {
 		if (err) {
-			console.log('error: ', err);
+			return console.log('error: ', err);
 		} else {
-			console.log('response: ', resp);
+			return console.log('response: ', resp);
 		}
 	});
 };
