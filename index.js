@@ -77,9 +77,11 @@ const generateMarkov = string => {
 const postTweet = tweetContent => {
 	T.post('statuses/update', { status: tweetContent }, (err, data, resp) => {
 		if (err) {
-			return console.log('error: ', err);
+			console.log('error: ', err);
+			process.exit(1);
 		} else {
-			return console.log('response: ', resp);
+			console.log('successfully posted');
+			process.exit(0);
 		}
 	});
 };
