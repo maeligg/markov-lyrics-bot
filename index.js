@@ -53,6 +53,7 @@ const getLyrics = async () => {
 	});
 
 	generateMarkov(allLyrics);
+	return;
 };
 
 const generateMarkov = string => {
@@ -71,6 +72,7 @@ const generateMarkov = string => {
 	});
 
 	postTweet(newLyrics);
+	return;
 };
 
 // Publish the tweet
@@ -79,9 +81,11 @@ const postTweet = tweetContent => {
 		if (err) {
 			console.log('error: ', err);
 			process.exit(1);
+			return;
 		} else {
 			console.log('successfully posted');
 			process.exit(0);
+			return;
 		}
 	});
 };
